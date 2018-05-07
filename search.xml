@@ -57,17 +57,6 @@
   </entry>
   <entry>
     <title><![CDATA[markedown 语法简介]]></title>
-    <url>%2F2018%2F01%2F24%2Fmarkdown%2F</url>
-    <content type="text"><![CDATA[标题 在行首插入1-6个#、分别对应1-6级标题 1# 我是标题 引言 在段落的第一行前面加入&gt; 这是引用别人的话 1234567891011121314151617181920212223242526 &gt; 这是引用别人的话 ``` ### 换行、分段 &amp;ensp;&amp;ensp;换行：行末加两个或以上个空格 &amp;emsp;&amp;emsp;分段：两个回车 ### 加入有序列表和无序列表&gt; 无序列表 * + -都可以生成 * red * blue &gt; 有序列表 1.加空格 1. red 2. blue ### 链接 [参考链接](http://www.baidu.com/ &quot;百度&quot;) 找问题 ` [参考链接](http://www.baidu.com/ &quot;百度&quot;) 找问题`### 强调Markdown 使用星号（*）和底线（_）作为标记强调字词的符号，被 * 或 _ 包围的字词会被转成用 &lt;em&gt; 标签包围，用两个 * 或 _ 包起来的话，则会被转成 &lt;strong&gt;，例如： single asterisks single underscores double asterisks double underscores 12345678910111213 *single asterisks* _single underscores_ **double asterisks** __double underscores__### 图片图片的语法和链接很像。行内形式(title 是选择性的): 12345678910### 链接More info: [Deployment](https://hexo.io/docs/deployment.html)参考形式：![alt text][id][id]: https://img-blog.csdn.net/20161222085404804 &quot;Title&quot;上面两种方法都会输出 HTML 为： ` 其他 分割线 ***]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[markedown 语法简介]]></title>
     <url>%2F2018%2F01%2F24%2F%E6%96%87%E6%9C%AC%2F</url>
     <content type="text"><![CDATA[css的使用 文本溢出td1234567891011table&#123; width:100px; table-layout:fixed;/* 只有定义了表格的布局算法为fixed，下面td的定义才能起作用。 */ &#125; td&#123; width:100%; word-break:keep-all;/* 不换行 */ white-space:nowrap;/* 不换行 */ overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */ text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用*/ &#125; 单行12345678910overflow: hidden;text-overflow:ellipsis;white-space: nowrap;// 多行display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden; 适用于WebKit浏览器及移动端1234567p&#123;position: relative; line-height: 20px; max-height: 40px;overflow: hidden;&#125;p::after&#123;content: &quot;...&quot;; position: absolute; bottom: 0; right: 0; padding-left: 40px;background: -webkit-linear-gradient(left, transparent, #fff 55%);background: -o-linear-gradient(right, transparent, #fff 55%);background: -moz-linear-gradient(right, transparent, #fff 55%);background: linear-gradient(to right, transparent, #fff 55%);&#125;]]></content>
       <categories>
@@ -75,6 +64,17 @@
       </categories>
       <tags>
         <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[markedown 语法简介]]></title>
+    <url>%2F2018%2F01%2F24%2Fmarkdown%2F</url>
+    <content type="text"><![CDATA[标题 在行首插入1-6个#、分别对应1-6级标题 1# 我是标题 引言 在段落的第一行前面加入&gt; 这是引用别人的话 1234567891011121314151617181920212223242526 &gt; 这是引用别人的话 ``` ### 换行、分段 &amp;ensp;&amp;ensp;换行：行末加两个或以上个空格 &amp;emsp;&amp;emsp;分段：两个回车 ### 加入有序列表和无序列表&gt; 无序列表 * + -都可以生成 * red * blue &gt; 有序列表 1.加空格 1. red 2. blue ### 链接 [参考链接](http://www.baidu.com/ &quot;百度&quot;) 找问题 ` [参考链接](http://www.baidu.com/ &quot;百度&quot;) 找问题`### 强调Markdown 使用星号（*）和底线（_）作为标记强调字词的符号，被 * 或 _ 包围的字词会被转成用 &lt;em&gt; 标签包围，用两个 * 或 _ 包起来的话，则会被转成 &lt;strong&gt;，例如： single asterisks single underscores double asterisks double underscores 12345678910111213 *single asterisks* _single underscores_ **double asterisks** __double underscores__### 图片图片的语法和链接很像。行内形式(title 是选择性的): 12345678910### 链接More info: [Deployment](https://hexo.io/docs/deployment.html)参考形式：![alt text][id][id]: https://img-blog.csdn.net/20161222085404804 &quot;Title&quot;上面两种方法都会输出 HTML 为： ` 其他 分割线 ***]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
