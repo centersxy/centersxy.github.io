@@ -67,6 +67,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[markedown 语法简介]]></title>
+    <url>%2F2018%2F01%2F24%2Fmarkdown%2F</url>
+    <content type="text"><![CDATA[标题 在行首插入1-6个#、分别对应1-6级标题 1# 我是标题 引言 在段落的第一行前面加入&gt; 这是引用别人的话 1234567891011121314151617181920212223242526 &gt; 这是引用别人的话 ``` ### 换行、分段 &amp;ensp;&amp;ensp;换行：行末加两个或以上个空格 &amp;emsp;&amp;emsp;分段：两个回车 ### 加入有序列表和无序列表&gt; 无序列表 * + -都可以生成 * red * blue &gt; 有序列表 1.加空格 1. red 2. blue ### 链接 [参考链接](http://www.baidu.com/ &quot;百度&quot;) 找问题 ` [参考链接](http://www.baidu.com/ &quot;百度&quot;) 找问题`### 强调Markdown 使用星号（*）和底线（_）作为标记强调字词的符号，被 * 或 _ 包围的字词会被转成用 &lt;em&gt; 标签包围，用两个 * 或 _ 包起来的话，则会被转成 &lt;strong&gt;，例如： single asterisks single underscores double asterisks double underscores 12345678910111213 *single asterisks* _single underscores_ **double asterisks** __double underscores__### 图片图片的语法和链接很像。行内形式(title 是选择性的): 12345678910### 链接More info: [Deployment](https://hexo.io/docs/deployment.html)参考形式：![alt text][id][id]: https://img-blog.csdn.net/20161222085404804 &quot;Title&quot;上面两种方法都会输出 HTML 为： ` 其他 分割线 ***]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[hexo 加入搜索功能]]></title>
     <url>%2F2018%2F01%2F24%2Fhexo%E9%85%8D%E7%BD%AE%2F</url>
     <content type="text"><![CDATA[首先，到Algolia官网注册一个账号（可以用github或gmail账号注册，毕竟国外的） 注册完成后，新建一个Index：名字可以随意，英文，且要记住，后面要用到（虽然不记得可以找到..） 接着，安装Hexo Algolia扩展， 这个扩展的功能是搜集站点的内容并通过 API 发送给 Algolia。前往站点根目录，执行命令安装1npm install --save hexo-algolia 接下来，在 Algolia 服务站点上找到需要使用的一些配置的值，包括 ApplicationID、Search-Only API Key、 Admin API Key。注意，Admin API Key 需要保密保存。点击ALL API KEYS 找到新建INDEX对应的key，编辑权限，在弹出框中找到ACL选择勾选Add records, Delete records, List indices, Delete index权限，点击update更新： 编辑站点配置文件，新增以下配置：这些值除了chunkSize不用修改，其他都可从Algolia网站上API Keys获得：12345algolia: applicationID: 你的APPID apiKey: 你的API Key indexName: 你的Index名字 chunkSize: 5000 接着，是最关键，坑最多的一步了。在git bash里面输入以下命令：切记切记要用git bash，因为Windows下无论powershell还是cmd都无法执行export命令。12export HEXO_ALGOLIA_INDEXING_KEY=你的API Keyhexo algolia]]></content>
@@ -76,17 +87,6 @@
       <tags>
         <tag>博客</tag>
         <tag>文章</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[markedown 语法简介]]></title>
-    <url>%2F2018%2F01%2F24%2Fmarkdown%2F</url>
-    <content type="text"><![CDATA[标题 在行首插入1-6个#、分别对应1-6级标题 1# 我是标题 引言 在段落的第一行前面加入&gt; 这是引用别人的话 1234567891011121314151617181920212223242526 &gt; 这是引用别人的话 ``` ### 换行、分段 &amp;ensp;&amp;ensp;换行：行末加两个或以上个空格 &amp;emsp;&amp;emsp;分段：两个回车 ### 加入有序列表和无序列表&gt; 无序列表 * + -都可以生成 * red * blue &gt; 有序列表 1.加空格 1. red 2. blue ### 链接 [参考链接](http://www.baidu.com/ &quot;百度&quot;) 找问题 ` [参考链接](http://www.baidu.com/ &quot;百度&quot;) 找问题`### 强调Markdown 使用星号（*）和底线（_）作为标记强调字词的符号，被 * 或 _ 包围的字词会被转成用 &lt;em&gt; 标签包围，用两个 * 或 _ 包起来的话，则会被转成 &lt;strong&gt;，例如： single asterisks single underscores double asterisks double underscores 12345678910111213 *single asterisks* _single underscores_ **double asterisks** __double underscores__### 图片图片的语法和链接很像。行内形式(title 是选择性的): 12345678910### 链接More info: [Deployment](https://hexo.io/docs/deployment.html)参考形式：![alt text][id][id]: https://img-blog.csdn.net/20161222085404804 &quot;Title&quot;上面两种方法都会输出 HTML 为： ` 其他 分割线 ***]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
       </tags>
   </entry>
   <entry>

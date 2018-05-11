@@ -1378,7 +1378,6 @@ pre .javascript .function {
   position: relative;
   z-index: 1010;
   margin-left: 55px;
-/* ======== */
 }
 .posts-collapse::after {
   content: " ";
@@ -1422,33 +1421,6 @@ pre .javascript .function {
 }
 .posts-collapse .post {
   margin: 30px 0;
-}
-.posts-collapse .post svg {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-.posts-collapse .post rect {
-  fill: none;
-  stroke: #f2625a;
-  stroke-width: 3;
-  stroke-dasharray: 422, 0;
-  transition: all 450ms linear 0s;
-}
-.posts-collapse .post:hover {
-  background: rgba(225,51,45,0);
-  font-weight: 900;
-  letter-spacing: 1px;
-  transition: all 150ms linear 0s;
-}
-.posts-collapse .post:hover rect {
-  stroke-width: 5;
-  stroke-dasharray: 15, 310;
-  stroke-dashoffset: 48;
-  -webkit-transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .posts-collapse .post-header {
   position: relative;
@@ -1981,7 +1953,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #81ff04;
+  background: #abccdb;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3156,4 +3128,32 @@ img:hover {
   padding: 25px;
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+  position: relative;
+}
+.post svg {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.post rect {
+  fill: none;
+  stroke: #f2625a;
+  stroke-width: 3;
+  stroke-dasharray: 422, 0;
+  transition: all 450ms linear 0s;
+}
+.post:hover {
+  background: rgba(225,51,45,0);
+  font-weight: 900;
+  letter-spacing: 1px;
+  transition: all 150ms linear 0s;
+}
+.post:hover rect {
+  stroke-width: 5;
+  stroke-dasharray: 15, 310;
+  stroke-dashoffset: 48;
+  -webkit-transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
 }
