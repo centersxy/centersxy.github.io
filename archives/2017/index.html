@@ -131,6 +131,47 @@
 
 
 
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+   <script>
+       $(document).ready(function () {
+         var SelectText = function(element) {
+             var doc = document
+                 , text = element
+                 , range, selection
+             ;    
+             if (doc.body.createTextRange) {
+                 range = document.body.createTextRange();
+                 range.moveToElementText(text);
+                 range.select();
+             } else if (window.getSelection) {
+                 selection = window.getSelection();        
+                 range = document.createRange();
+                 range.selectNodeContents(text);
+                 selection.removeAllRanges();
+                 selection.addRange(range);
+             }
+         };
+         $(".code").each(function() {
+             var code = $(this).get(0);
+             var button_html = 
+                 '<div style="position: fixed;'                                                               +
+                             'right: 3%;'                                                                     +
+                             'margin-top: 5px;'                                                               +
+                             'font-family: consolas, Menlo, \'PingFang SC\', \'Microsoft YaHei\', monospace;' +
+                             'font-size: 10px;'                                                               +
+                             'cursor: pointer;'                                                               +
+                             'color: #e31436;'                                                                +
+                             '">'                                                                             +
+                 '<span>全选</span>'                                                                          +
+                 '</div>';
+             var button = $(button_html);
+             $(button).click(function() {
+                 SelectText(code);
+             });
+             $(button).insertBefore(this);
+         });
+       });
+   </script> 
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -305,9 +346,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2017/08/24/vue-router/" itemprop="url">
+            <a class="post-title-link" href="/2017/08/24/vue生命周期/" itemprop="url">
               
-                <span itemprop="name">vue-router 的相关</span>
+                <span itemprop="name">vue生命周期</span>
               
             </a>
         
@@ -342,9 +383,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2017/08/24/vue生命周期/" itemprop="url">
+            <a class="post-title-link" href="/2017/08/24/vue-router/" itemprop="url">
               
-                <span itemprop="name">vue生命周期</span>
+                <span itemprop="name">vue-router 的相关</span>
               
             </a>
         
