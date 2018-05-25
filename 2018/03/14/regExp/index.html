@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="用得到的一些实例  获取最后一个/xx. 123456789var reg = /.*\/([^\.\/]+)/g;var url = &amp;quot;sdfsdfsdfsdfsdfsdfsdfsdf/123.jpg&amp;quot;;console.log(str.replace(reg,&amp;quot;$1&amp;quot;))//  123.var str = &amp;quot;/asdasf/asfaewf/aga">
+<meta name="description" content="用得到的一些实例 获取最后一个/xx.123456789var reg = /.*\/([^\.\/]+)/g;var url = &amp;quot;sdfsdfsdfsdfsdfsdfsdfsdf/123.jpg&amp;quot;;console.log(str.replace(reg,&amp;quot;$1&amp;quot;))//  123.var str = &amp;quot;/asdasf/asfaewf/agaeg">
 <meta name="keywords" content="JS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="正则表达式和字符操作">
 <meta property="og:url" content="http://youcanyou.top/2018/03/14/regExp/index.html">
 <meta property="og:site_name" content="退堂鼓表演艺术家">
-<meta property="og:description" content="用得到的一些实例  获取最后一个/xx. 123456789var reg = /.*\/([^\.\/]+)/g;var url = &amp;quot;sdfsdfsdfsdfsdfsdfsdfsdf/123.jpg&amp;quot;;console.log(str.replace(reg,&amp;quot;$1&amp;quot;))//  123.var str = &amp;quot;/asdasf/asfaewf/aga">
+<meta property="og:description" content="用得到的一些实例 获取最后一个/xx.123456789var reg = /.*\/([^\.\/]+)/g;var url = &amp;quot;sdfsdfsdfsdfsdfsdfsdfsdf/123.jpg&amp;quot;;console.log(str.replace(reg,&amp;quot;$1&amp;quot;))//  123.var str = &amp;quot;/asdasf/asfaewf/agaeg">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-12T07:54:13.515Z">
+<meta property="og:updated_time" content="2018-05-18T06:06:47.329Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式和字符操作">
-<meta name="twitter:description" content="用得到的一些实例  获取最后一个/xx. 123456789var reg = /.*\/([^\.\/]+)/g;var url = &amp;quot;sdfsdfsdfsdfsdfsdfsdfsdf/123.jpg&amp;quot;;console.log(str.replace(reg,&amp;quot;$1&amp;quot;))//  123.var str = &amp;quot;/asdasf/asfaewf/aga">
+<meta name="twitter:description" content="用得到的一些实例 获取最后一个/xx.123456789var reg = /.*\/([^\.\/]+)/g;var url = &amp;quot;sdfsdfsdfsdfsdfsdfsdfsdf/123.jpg&amp;quot;;console.log(str.replace(reg,&amp;quot;$1&amp;quot;))//  123.var str = &amp;quot;/asdasf/asfaewf/agaeg">
 
 
 
@@ -379,30 +379,17 @@
 
       
         <h3 id="用得到的一些实例"><a href="#用得到的一些实例" class="headerlink" title="用得到的一些实例"></a>用得到的一些实例</h3><hr>
-<ol>
-<li><p>获取最后一个/xx.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var reg = /.*\/([^\.\/]+)/g;</span><br><span class="line">var url = &quot;sdfsdfsdfsdfsdfsdfsdfsdf/123.jpg&quot;;</span><br><span class="line">console.log(str.replace(reg,&quot;$1&quot;))</span><br><span class="line">//  123.</span><br><span class="line"></span><br><span class="line">var str = &quot;/asdasf/asfaewf/agaegr/trer/rhh&quot;;</span><br><span class="line">var index = str .lastIndexOf(&quot;\/&quot;);  </span><br><span class="line">str  = str .substring(index + 1, str .length);</span><br><span class="line">//  rhh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>charAt   返回指定位置的字符。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var get_char = a.charAt(0);</span><br><span class="line">//get_char = &quot;h&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>substring 返回字符串的一个子串，传入参数是起始位置和结束位置。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var sub_string1 = a.substring(1);</span><br><span class="line">//sub_string1 = &quot;ello&quot;</span><br><span class="line">var sub_string2 = a.substring(1,4);</span><br><span class="line">//sub_string2 = &quot;ell&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="获取最后一个-xx"><a href="#获取最后一个-xx" class="headerlink" title="获取最后一个/xx."></a>获取最后一个/xx.</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var reg = /.*\/([^\.\/]+)/g;</span><br><span class="line">var url = &quot;sdfsdfsdfsdfsdfsdfsdfsdf/123.jpg&quot;;</span><br><span class="line">console.log(str.replace(reg,&quot;$1&quot;))</span><br><span class="line">//  123.</span><br><span class="line"></span><br><span class="line">var str = &quot;/asdasf/asfaewf/agaegr/trer/rhh&quot;;</span><br><span class="line">var index = str .lastIndexOf(&quot;\/&quot;);  </span><br><span class="line">str  = str .substring(index + 1, str .length);</span><br><span class="line">//  rhh</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var blueurl= 127.0.0.1/1.txt</span><br><span class="line">var reg = /([/][^/]+)$/;</span><br><span class="line">var blueurl = blueurl.replace(reg, &quot;&quot;);</span><br><span class="line">var reg2 = /([^/]+)$/;</span><br><span class="line"> var bluef</span><br></pre></td></tr></table></figure>
+<h4 id="charAt-返回指定位置的字符。"><a href="#charAt-返回指定位置的字符。" class="headerlink" title="charAt   返回指定位置的字符。"></a>charAt   返回指定位置的字符。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var get_char = a.charAt(0);</span><br><span class="line">//get_char = &quot;h&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="substring-返回字符串的一个子串，传入参数是起始位置和结束位置。"><a href="#substring-返回字符串的一个子串，传入参数是起始位置和结束位置。" class="headerlink" title="substring 返回字符串的一个子串，传入参数是起始位置和结束位置。"></a>substring 返回字符串的一个子串，传入参数是起始位置和结束位置。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var sub_string1 = a.substring(1);</span><br><span class="line">//sub_string1 = &quot;ello&quot;</span><br><span class="line">var sub_string2 = a.substring(1,4);</span><br><span class="line">//sub_string2 = &quot;ell&quot;</span><br></pre></td></tr></table></figure>
 <pre><code>substr 返回字符串的一个子串，传入参数是起始位置和长度
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var sub_string1 = a.substr(1);</span><br><span class="line">//sub_string1 = &quot;ello&quot;</span><br><span class="line">var sub_string2 = a.substr(1,4);</span><br><span class="line">//sub_string2 = &quot;ello&quot;</span><br></pre></td></tr></table></figure>
-</code></pre></li>
-<li><p>slice 提取字符串的一部分，并返回一个新字符串（与 substring 相同）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var sub_string1 = a.slice(1);</span><br><span class="line">//sub_string1 = &quot;ello&quot;</span><br><span class="line">var sub_string2 = a.slice(1,4);</span><br><span class="line">//sub_string2 = &quot;ell&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>toLowerCase 将整个字符串转成小写字母。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var lower_string = a.toLowerCase();</span><br><span class="line">//lower_string = &quot;hello&quot;</span><br></pre></td></tr></table></figure>
-<pre><code>toUpperCase 将整个字符串转成大写字母。
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var upper_string = a.toUpperCase();</span><br><span class="line">//upper_string = &quot;HELLO&quot;</span><br></pre></td></tr></table></figure>
-</code></pre></li>
-</ol>
-
+</code></pre><h4 id="slice-提取字符串的一部分，并返回一个新字符串（与-substring-相同）。"><a href="#slice-提取字符串的一部分，并返回一个新字符串（与-substring-相同）。" class="headerlink" title="slice 提取字符串的一部分，并返回一个新字符串（与 substring 相同）。"></a>slice 提取字符串的一部分，并返回一个新字符串（与 substring 相同）。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var sub_string1 = a.slice(1);</span><br><span class="line">//sub_string1 = &quot;ello&quot;</span><br><span class="line">var sub_string2 = a.slice(1,4);</span><br><span class="line">//sub_string2 = &quot;ell&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="toLowerCase-将整个字符串转成小写字母。"><a href="#toLowerCase-将整个字符串转成小写字母。" class="headerlink" title="toLowerCase 将整个字符串转成小写字母。"></a>toLowerCase 将整个字符串转成小写字母。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var lower_string = a.toLowerCase();</span><br><span class="line">//lower_string = &quot;hello&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="toUpperCase-将整个字符串转成大写字母。"><a href="#toUpperCase-将整个字符串转成大写字母。" class="headerlink" title="toUpperCase 将整个字符串转成大写字母。"></a>toUpperCase 将整个字符串转成大写字母。</h4><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var upper_string = a.toUpperCase();</span><br><span class="line">//upper_string = &quot;HELLO&quot;</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="es6中的方法"><a href="#es6中的方法" class="headerlink" title="es6中的方法"></a>es6中的方法</h3><h4 id="repeat方法返回一个新字符串，表示将原字符串重复n次。"><a href="#repeat方法返回一个新字符串，表示将原字符串重复n次。" class="headerlink" title="repeat方法返回一个新字符串，表示将原字符串重复n次。"></a>repeat方法返回一个新字符串，表示将原字符串重复n次。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&apos;x&apos;.repeat(3) // &quot;xxx&quot;</span><br><span class="line">&apos;hello&apos;.repeat(2) // &quot;hellohello&quot;</span><br><span class="line">&apos;na&apos;.repeat(0) // &quot;&quot;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -444,8 +431,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/28/echartSetting/" rel="next" title="echart的相关设置">
-                <i class="fa fa-chevron-left"></i> echart的相关设置
+              <a href="/2018/03/14/jsArr/" rel="next" title="JS中数组的常用方法(包含es6扩展)">
+                <i class="fa fa-chevron-left"></i> JS中数组的常用方法(包含es6扩展)
               </a>
             
           </div>
@@ -454,8 +441,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/14/jsArr/" rel="prev" title="JS中数组的常用方法(包含es6扩展)">
-                JS中数组的常用方法(包含es6扩展) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/14/数据的转化/" rel="prev" title="JS中数据格式的转化">
+                JS中数据格式的转化 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -538,7 +525,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -560,7 +547,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -623,7 +610,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#用得到的一些实例"><span class="nav-number">1.</span> <span class="nav-text">用得到的一些实例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#用得到的一些实例"><span class="nav-number">1.</span> <span class="nav-text">用得到的一些实例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#获取最后一个-xx"><span class="nav-number">1.1.</span> <span class="nav-text">获取最后一个/xx.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#charAt-返回指定位置的字符。"><span class="nav-number">1.2.</span> <span class="nav-text">charAt   返回指定位置的字符。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#substring-返回字符串的一个子串，传入参数是起始位置和结束位置。"><span class="nav-number">1.3.</span> <span class="nav-text">substring 返回字符串的一个子串，传入参数是起始位置和结束位置。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#slice-提取字符串的一部分，并返回一个新字符串（与-substring-相同）。"><span class="nav-number">1.4.</span> <span class="nav-text">slice 提取字符串的一部分，并返回一个新字符串（与 substring 相同）。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#toLowerCase-将整个字符串转成小写字母。"><span class="nav-number">1.5.</span> <span class="nav-text">toLowerCase 将整个字符串转成小写字母。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#toUpperCase-将整个字符串转成大写字母。"><span class="nav-number">1.6.</span> <span class="nav-text">toUpperCase 将整个字符串转成大写字母。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#es6中的方法"><span class="nav-number">2.</span> <span class="nav-text">es6中的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#repeat方法返回一个新字符串，表示将原字符串重复n次。"><span class="nav-number">2.1.</span> <span class="nav-text">repeat方法返回一个新字符串，表示将原字符串重复n次。</span></a></li></ol></li></ol></div>
             
 
           </div>

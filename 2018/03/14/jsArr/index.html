@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="退堂鼓表演艺术家">
 <meta property="og:description" content="JS中数组的常用方法(包含es6扩展 1、join()1234功能：将数组中所有元素都转化为字符串并连接在一起。输入： 分隔符，默认为逗号输出：分隔符分割的字符串举例： 123var a = [1,2,3];a.join(); // =&amp;gt;&amp;quot;1,2,3&amp;quot;a.join(&amp;quot;;&amp;quot;);// =&amp;gt;&amp;quot;1;2;3&amp;quot; 2、 reverse()1">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-12T07:54:09.334Z">
+<meta property="og:updated_time" content="2018-05-25T05:14:52.462Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS中数组的常用方法(包含es6扩展)">
 <meta name="twitter:description" content="JS中数组的常用方法(包含es6扩展 1、join()1234功能：将数组中所有元素都转化为字符串并连接在一起。输入： 分隔符，默认为逗号输出：分隔符分割的字符串举例： 123var a = [1,2,3];a.join(); // =&amp;gt;&amp;quot;1,2,3&amp;quot;a.join(&amp;quot;;&amp;quot;);// =&amp;gt;&amp;quot;1;2;3&amp;quot; 2、 reverse()1">
@@ -422,6 +422,30 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">for (let index of [&apos;a&apos;, &apos;b&apos;].keys()) &#123;</span><br><span class="line">  console.log(index);</span><br><span class="line">&#125;</span><br><span class="line">// =&gt;0</span><br><span class="line">// =&gt;1</span><br><span class="line"></span><br><span class="line">for (let elem of [&apos;a&apos;, &apos;b&apos;].values()) &#123;</span><br><span class="line">  console.log(elem);</span><br><span class="line">&#125;</span><br><span class="line">// =&gt;&apos;a&apos;</span><br><span class="line">// =&gt;&apos;b&apos;</span><br><span class="line"></span><br><span class="line">for (let [index, elem] of [&apos;a&apos;, &apos;b&apos;].entries()) &#123;</span><br><span class="line">  console.log(index, elem);</span><br><span class="line">&#125;</span><br><span class="line">// =&gt;0 &quot;a&quot;</span><br><span class="line">// =&gt;1 &quot;b&quot;</span><br></pre></td></tr></table></figure>
 <p><strong>22、includes() </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">功能：表示某个数组是否包含给定的值 </span><br><span class="line">输入：第一个参数必选（待检查的给定值），第二个参数可选，表示搜索的起始位置，默认为0，负数表示倒数的位置。 </span><br><span class="line">输出：一个布尔值。 </span><br><span class="line">注意：和indexOf的区别，indexOf进行了运算符的强比对，会导致对NaN误判。 </span><br><span class="line">举例</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[1, 2, 3].includes(2);     // true</span><br><span class="line">[1, 2, 3].includes(4);     // false</span><br><span class="line">[1, 2, NaN].includes(NaN); // true</span><br></pre></td></tr></table></figure>
+<h3 id="数组排序"><a href="#数组排序" class="headerlink" title="数组排序"></a>数组排序</h3><h4 id="1-JavaScript的sort-方法"><a href="#1-JavaScript的sort-方法" class="headerlink" title="1.JavaScript的sort()方法"></a>1.JavaScript的sort()方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var array = [1,4,-8,-3,6,12,9,8];</span><br><span class="line">function compare(val1,val2)&#123;</span><br><span class="line">    return val1-val2;</span><br><span class="line">&#125;;</span><br><span class="line">array.sort(compare);</span><br><span class="line">document.write(array);</span><br></pre></td></tr></table></figure>
+<p>sort()方法按照升序排列数组项，会调用每个数组项的toString()转型方法，然后比较得到的字符串。</p>
+<p>toString()方法是把布尔值或BooleanObject转换为字符串，并返回结果。</p>
+<p>compare()函数方法是一个比较函数，作为sort()方法的参数。</p>
+<h4 id="2-冒泡排序（从后向前）"><a href="#2-冒泡排序（从后向前）" class="headerlink" title="2. 冒泡排序（从后向前）"></a>2. 冒泡排序（从后向前）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var array = [1,4,-8,-3,6,12,9,8];</span><br><span class="line">function sort(arr)&#123;</span><br><span class="line">    for(var j=0;j&lt;arr.length-1;j++)&#123;</span><br><span class="line">    //两两比较，如果前一个比后一个大，则交换位置。</span><br><span class="line">       for(var i=0;i&lt;arr.length-1-j;i++)&#123;</span><br><span class="line">            if(arr[i]&gt;arr[i+1])&#123;</span><br><span class="line">                var temp = arr[i];</span><br><span class="line">                arr[i] = arr[i+1];</span><br><span class="line">                arr[i+1] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">sort(array);</span><br><span class="line">document.write(array);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>（1）比较相邻的元素。如果第一个比第二个大，就交换他们两个位置。</li>
+<li>（2）对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。</li>
+<li>（3）针对所有的元素重复以上的步骤，除了最后一个。</li>
+<li>（4）持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</li>
+</ul>
+<h4 id="3-快速排序：递归思想，两边快速的排序，冒泡排序的改进"><a href="#3-快速排序：递归思想，两边快速的排序，冒泡排序的改进" class="headerlink" title="3. 快速排序：递归思想，两边快速的排序，冒泡排序的改进"></a>3. 快速排序：递归思想，两边快速的排序，冒泡排序的改进</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var array = [1,4,-8,-3,6,12,9,8];</span><br><span class="line">function quickSort(arr)&#123;</span><br><span class="line">//如果数组长度小于等于1，则返回数组本身</span><br><span class="line">    if(arr.length&lt;=1)&#123;</span><br><span class="line">        return arr;</span><br><span class="line">    &#125;</span><br><span class="line">    //定义中间值的索引</span><br><span class="line">    var index = Math.floor(arr.length/2);</span><br><span class="line">    //取到中间值</span><br><span class="line">    var temp = arr.splice(index,1);</span><br><span class="line">    //定义左右部分数组</span><br><span class="line">    var left = [];</span><br><span class="line">    var right = [];</span><br><span class="line">    for(var i=0;i&lt;arr.length;i++)&#123;</span><br><span class="line">    //如果元素比中间值小，那么放在左边，否则放右边</span><br><span class="line">        if(arr[i]&lt;temp)&#123;</span><br><span class="line">            left.push(arr[i]);</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            right.push(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return quickSort(left).concat(temp,quickSort(right));</span><br><span class="line">&#125;</span><br><span class="line">document.write(quickSort(array));</span><br></pre></td></tr></table></figure>
+<p>Math.floor(x)方法是向下取整，返回小于或等于x的最接近的整数。</p>
+<p>splice(index,num,item)方法是向数组中添加项目，或是从数组中删除项目，并返回被删除的项目。</p>
+<ul>
+<li>index是整数，被操作项目所在的位置（必须）</li>
+<li>num是整数，要删除的项目的数量，如果为0，表示不删除（必须）</li>
+<li>item是向数组中添加的新项目，可以是多个（可选）</li>
+<li>push()方法是向数组末尾添加一个或多个新项目并返回新数组的长度</li>
+</ul>
+<p>concat()方法连接两个或多个数组，不会改变原有数组，返回一个新数组</p>
+<h4 id="4-插入排序"><a href="#4-插入排序" class="headerlink" title="4. 插入排序"></a>4. 插入排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">var array = [1,4,-8,-3,6,12,9,8];</span><br><span class="line">function insertSort(arr)&#123;</span><br><span class="line">//假设第0元素是有序序列，第1元素之后是无序的序列。从第1元素开始依次将无序序列的元素插入到有序序列中</span><br><span class="line">    for(var i=1; i&lt;arr.length;i++)&#123;</span><br><span class="line">        if(arr[i]&lt;arr[i-1])&#123;</span><br><span class="line">            //取出无序序列中需要插入的第i个元素</span><br><span class="line">            var temp = arr[i];</span><br><span class="line">            //定义有序中的最后一个位置</span><br><span class="line">            var j = i-1;</span><br><span class="line">            arr[i] = arr[j];</span><br><span class="line">            //比较大小，找到插入的位置</span><br><span class="line">            while(j&gt;=0&amp;&amp;temp&lt;arr[j])&#123;</span><br><span class="line">                arr[j+1] = arr[j];</span><br><span class="line">                j--;</span><br><span class="line">            &#125;;</span><br><span class="line">            //插入</span><br><span class="line">            arr[j+1] = temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">insertSort(array)</span><br><span class="line">document.write(array);</span><br></pre></td></tr></table></figure>
+<p>（1）从第一个元素开始，该元素可以认为已经被排序<br>（2）取出下一个元素，在已经排序的元素序列中扫描<br>（3）如果该元素（已排序）大于新元素，将该元素移到下一位置<br>（4）重复步骤3，直到找到已排序的元素小于或者等于新元素的位置<br>（5）将新元素插入到下一位置中<br>（6）重复步骤2</p>
+
       
     </div>
     
@@ -463,8 +487,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/14/regExp/" rel="next" title="正则表达式和字符操作">
-                <i class="fa fa-chevron-left"></i> 正则表达式和字符操作
+              <a href="/2018/02/28/echartSetting/" rel="next" title="echart的相关设置">
+                <i class="fa fa-chevron-left"></i> echart的相关设置
               </a>
             
           </div>
@@ -473,8 +497,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/14/数据的转化/" rel="prev" title="JS中数据格式的转化">
-                JS中数据格式的转化 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/14/regExp/" rel="prev" title="正则表达式和字符操作">
+                正则表达式和字符操作 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -557,7 +581,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -579,7 +603,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -642,7 +666,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JS中数组的常用方法-包含es6扩展"><span class="nav-number">1.</span> <span class="nav-text">JS中数组的常用方法(包含es6扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#es6扩展"><span class="nav-number">2.</span> <span class="nav-text">es6扩展</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JS中数组的常用方法-包含es6扩展"><span class="nav-number">1.</span> <span class="nav-text">JS中数组的常用方法(包含es6扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#es6扩展"><span class="nav-number">2.</span> <span class="nav-text">es6扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组排序"><span class="nav-number">3.</span> <span class="nav-text">数组排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-JavaScript的sort-方法"><span class="nav-number">3.1.</span> <span class="nav-text">1.JavaScript的sort()方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-冒泡排序（从后向前）"><span class="nav-number">3.2.</span> <span class="nav-text">2. 冒泡排序（从后向前）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-快速排序：递归思想，两边快速的排序，冒泡排序的改进"><span class="nav-number">3.3.</span> <span class="nav-text">3. 快速排序：递归思想，两边快速的排序，冒泡排序的改进</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-插入排序"><span class="nav-number">3.4.</span> <span class="nav-text">4. 插入排序</span></a></li></ol></li></ol></div>
             
 
           </div>
